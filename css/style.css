@@ -1,0 +1,238 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+
+/* Remove underline + default link color */
+a {
+  text-decoration: none;
+  color: inherit;   /* dùng màu chữ của cha (ở đây là #222) */
+}
+
+a:visited {
+  color: inherit;   /* không đổi màu khi đã click */
+}
+
+a:hover {
+  color: #2460a7;   /* giữ nguyên màu khi hover */
+  font-weight:700;
+}
+
+
+/* Adventure luôn hiển thị 1 cột */
+.adventure ul {
+  grid-template-columns: 1fr !important;
+}
+
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-family: "Dancing Script", cursive;
+  color: #111;
+}
+
+.header p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.socials {
+  text-align: center;
+  margin: 20px 0;
+  
+}
+
+.socials .social {
+  display: inline-block;
+  margin: 0 6px;
+  font-size: 20px;
+  padding: 12px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #333;
+  transition: 0.3s;
+}
+
+.socials .social:hover {
+  background: #f2f2f2;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.socials p {
+  margin-top: 15px;
+  color: #666;
+  font-size: 18px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  margin-top: 35px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #111;
+  border-left: 4px solid #111;
+  padding-left: 8px;
+}
+
+/* CATEGORY GRID – 2 columns */
+.section ul {
+  list-style: none;
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cột */
+  gap: 10px;
+}
+
+.section ul li {
+  padding: 10px 12px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.section ul li:hover {
+  background: #eaeaea;
+}
+
+.section ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+.section p {
+  margin: 6px 0;
+  color: #444;
+}
+
+
+.section ul li a:hover,
+a:hover {
+  color: #2460a7 !important;
+  font-weight:700;
+}
+
+
+
+/* QUICK – 3 columns */
+.section.quick ul {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 22px;
+  }
+
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .socials .social {
+    margin: 5px 4px;
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  /* Căn giữa toàn bộ sections */
+  .section {
+    text-align: center;
+  }
+
+  .section h2 {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .section ul li {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+
+  .section.quick ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+
+
+
+
+
+  /* Chỉ khi màn hình rất nhỏ (≤ 320px) mới 1 cột */
+@media (max-width: 320px) {
+  .section ul {
+    grid-template-columns: 1fr;
+  }
+  .section.quick ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+
+
+}
+
+
+
+
+
